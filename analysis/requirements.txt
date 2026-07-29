@@ -1,0 +1,12 @@
+openai
+strip_tags
+tiktoken
+mistralai
+anthropic
+openrouter
+ipykernel
+pandas
+tqdm
+python-dotenv
+scikit-learn
+matplotlib

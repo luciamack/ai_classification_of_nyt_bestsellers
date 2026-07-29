@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Have we reached peak romance</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+
+        body {
+    margin: 0;
+    font-size: 19px;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #222;
+    background: #fafafa;
+    text-rendering: optimizeLegibility;
+}
+
+.content {
+    max-width: 680px;
+    margin: auto;
+}
+
+.almost_full_width {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+.header {
+    padding: 2em 0 0 0;
+}
+
+h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    font-size: 2.8em;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.subhead {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.2em;
+    color: #555;
+}
+
+p {
+    line-height: 1.7;
+    margin: 0;
+    padding-bottom: 1.2em;
+}
+
+a {
+    color: #e75480;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(231,84,128,0.3);
+}
+
+a:hover {
+    border-bottom: 1px solid #e75480;
+}
+
+figure {
+    margin: 2em 0;
+}
+
+figcaption {
+    font-size: 0.85em;
+    text-align: left;
+    margin-top: 0.5em;
+    color: #777;
+}
+
+.methodology_section{
+    max-width: 680px;
+    background-color: rgba(231, 84, 128, 0.5);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 12pt
+}
+
+         .footer {
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 4em;
+            padding: 4em 0;
+        }
+
+        .full-width figure {
+            text-align: center;
+        }
+        #chart1_line {
+  stroke-dasharray: 3822;
+  stroke-dashoffset: 3822;
+  animation: draw 4s linear forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+} 
+
+
+   #chart2_line {
+  stroke-dasharray: 3822;
+  stroke-dashoffset: 3822;
+  animation: draw 4s linear forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+} 
+
+        /* margin on mobile */
+        @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+    </style>
+<!-- Step 2: add your d3 script below -->
+     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>Have we reached peak romance?</h1>
+        </div>
+    </div>
+    <div class="full-width">
+        <figure>
+            <!-- // Animated using this tutorial https://medium.com/@sterling.meghan/svg-line-animation-for-beginners-51857c88357f -->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="exportSvg" width="800" height="403"><defs/><g><g><g id="__svelte-dw-svg"><g id="container-svg container-body-svg datawrapper-U3ZSH-1gvfeww-svg"><g id="container-svg container-bodyTop-svg datawrapper-U3ZSH-lmtz6e-svg"><g id="container-svg container-bodyCenter-svg datawrapper-U3ZSH-1fgvipr-svg"><g id="container-svg container-header-svg datawrapper-U3ZSH-xp3kt5-svg"><text transform="translate(0, 0)"><tspan fill="rgb(24,24,24)" x="0" y="14" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 14px;">The share of the New York Times' combined print and e-book fiction bestseller list taken by romance novels every month from</tspan><tspan fill="rgb(24,24,24)" x="0" y="31" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 14px;">Jan. 2016 to Dec. 2025</tspan></text></g><g id="chart-svg"><g id="svg-main-svg" transform="translate(0, 44)"><g id="group-svg" transform="translate(28.53125, 6)"><g id="x-grid-svg"/><g id="y-grid-svg"><g id="y-grid-lines-svg grid-y-svg datawrapper-U3ZSH-1mqm0ow-svg"><line x1="0" x2="771.46875" y1="0" y2="0" transform="translate(0, 67.74194)" style="fill: none; stroke-width: 1; stroke-linejoin: miter; stroke-linecap: butt; stroke: rgb(231, 231, 231);"/><line x1="0" x2="771.46875" y1="0" y2="0" transform="translate(0, 183.87097)" style="fill: none; stroke-width: 1; stroke-linejoin: miter; stroke-linecap: butt; stroke: rgb(231, 231, 231);"/></g></g><g id="area-fills-svg"/><g id="lines-svg"><g id="romance_percent-svg"><g id="romance_percent-svg"><path id="chart1_line" d="M10,177.759L16.432,175.051L22.448,212.903L28.871,132.391L35.096,171.806L41.527,188.337L47.752,128.176L54.183,160.351L60.615,220.161L66.839,222.182L73.279,224.592L79.504,241.349L85.935,183.871L92.367,203.226L98.176,241.935L104.599,261.29L110.823,290.323L117.255,241.935L123.479,261.29L129.911,270.968L136.343,261.29L142.567,280.645L149.007,270.968L155.231,253.548L161.663,222.581L168.095,183.871L173.904,261.29L180.327,270.968L186.551,241.935L192.983,261.29L199.207,261.29L205.639,241.935L212.07,253.548L218.295,251.613L224.735,222.581L230.959,230.323L237.391,222.581L243.823,232.258L249.632,269.032L256.055,261.29L262.279,212.903L268.711,238.065L274.935,261.29L281.367,292.258L287.798,290.323L294.022,280.645L300.463,276.774L306.687,300L313.119,290.323L319.55,276.774L325.567,232.258L331.99,251.613L338.214,284.516L344.646,261.29L350.87,193.548L357.302,230.323L363.734,280.645L369.958,238.065L376.398,241.935L382.622,261.29L389.054,152.903L395.486,164.516L401.295,241.935L407.718,232.258L413.942,253.548L420.374,212.903L426.598,207.097L433.03,222.581L439.461,203.226L445.686,168.387L452.126,164.516L458.35,183.871L464.782,168.387L471.213,154.839L477.023,164.516L483.446,98.71L489.67,96.774L496.102,0L502.326,21.29L508.757,38.71L515.189,106.452L521.413,168.387L527.854,164.516L534.078,168.387L540.51,154.839L546.941,77.419L552.75,87.097L559.174,114.194L565.398,125.806L571.829,87.097L578.054,98.71L584.485,183.871L590.917,238.065L597.141,135.484L603.581,193.548L609.806,207.097L616.237,164.516L622.669,212.903L628.686,168.387L635.109,116.129L641.333,96.774L647.765,129.677L653.989,222.581L660.421,214.839L666.852,241.935L673.076,251.613L679.517,230.323L685.741,280.645L692.173,251.613L698.604,212.903L704.414,152.903L710.837,203.226L717.061,176.129L723.492,145.161L729.717,129.811L736.148,174.455L742.58,212.903L748.804,174.194L755.245,238.065L761.469,261.29" stroke="rgb(231,84,128)" id="romance_percent" style="fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; stroke: rgb(231, 84, 128);"/></g></g></g><g id="lbl-connect-lines-svg"/><g id="x-grid-svg"><g id="x-tick-labels-svg date-axis-svg grid-x-svg datawrapper-U3ZSH-inx4wh-svg svelte-qac4x9-svg" transform="translate(0, 305)"><text transform="translate(10, 12) translate(-13.61621, 0) translate(13.6162109375, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2016</tspan></text><text transform="translate(85.93527, 12) translate(-13.61621, 0) translate(13.6162109375, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2017</tspan></text><text transform="translate(161.66307, 12) translate(-13.61621, 0) translate(13.6162109375, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2018</tspan></text><text transform="translate(237.39088, 12) translate(-13.49219, 0) translate(13.4921875, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2019</tspan></text><text transform="translate(313.11868, 12) translate(-13.61621, 0) translate(13.6162109375, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2020</tspan></text><text transform="translate(389.05395, 12) translate(-13.49219, 0) translate(13.4921875, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2021</tspan></text><text transform="translate(464.78175, 12) translate(-13.61621, 0) translate(13.6162109375, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2022</tspan></text><text transform="translate(540.50955, 12) translate(-13.49219, 0) translate(13.4921875, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2023</tspan></text><text transform="translate(616.23735, 12) translate(-13.61621, 0) translate(13.6162109375, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2024</tspan></text><text transform="translate(692.17263, 12) translate(-13.61621, 0) translate(13.6162109375, 0)" style="text-anchor: middle;"><tspan fill="rgb(116, 116, 116)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">2025</tspan></text><g id="highlighted-ticks-svg"/></g></g><g id="y-grid-svg"><g id="y-tick-labels-svg number-axis-svg grid-y-svg datawrapper-U3ZSH-1fzbge6-svg" transform="translate(-5, 0)"><text transform="translate(0, 304) translate(-7, 0) translate(7, 0)" style="text-anchor: end;"><tspan fill="rgb(162, 162, 162)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">0</tspan></text><text transform="translate(0, 187.87097) translate(-13.74414, 0) translate(13.744140625, 0)" style="text-anchor: end;"><tspan fill="rgb(162, 162, 162)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">20</tspan></text><text transform="translate(0, 71.74194) translate(-22.48828, 0) translate(22.48828125, 0)" style="text-anchor: end;"><tspan fill="rgb(162, 162, 162)" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 12px;" x="0" dominant-baseline="auto" y="0">40%</tspan></text></g><g id="y-base-lines-svg grid-y-svg datawrapper-U3ZSH-1ro4gsw-svg"><line x1="771.46875" x2="0" y1="0" y2="0" transform="translate(0, 300)" style="fill: none; stroke-width: 1; stroke-linejoin: miter; stroke-linecap: square; stroke: rgb(24, 24, 24);"/></g></g><g id="value-labels-svg"/><g id="inner-value-labels-svg"/></g></g><g id="tooltip-layer-svg" transform="translate(0, 44)"><g id="group-svg" transform="translate(28.53125, 6)"/></g></g></g></g><g id="container-svg container-footer-svg datawrapper-U3ZSH-1la8dcw-svg"><text transform="translate(0, 390)"><tspan fill="rgb(136,136,136)" x="0" y="11" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 11px;">Source:</tspan><tspan fill="rgb(136,136,136)" dx="2.734375" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 11px;">AI analysis of New York Times data</tspan><tspan fill="rgb(136,136,136)" dx="2.739" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 11px;">•</tspan><tspan fill="rgb(136,136,136)" dx="2.739" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 11px;">Created with</tspan><tspan fill="rgb(136,136,136)" dx="2.734375" style="font-family: Roboto; font-weight: 400; font-stretch: 100%; font-size: 11px;">Datawrapper</tspan></text></g></g></g></g></g></svg>
+        </figure>
+    </div>
+    <div class="content">
+        <div class="byline">
+            <p>By <a href="https://www.linkedin.com/in/lucia-mackenzie-8b8858199/">Lucia Mackenzie</a></p>
+        </div>
+        <p>In June 2022 over half of bestselling books in the U.S. were romance novels. It is the first and only time in the last decade that romance books took up the majority of spots in a month of New York Times best seller lists.</p>
+        <p>That is according to an AI model I asked to comb through over 10 years worth of data.</p>
+        <p>I began reading romance during the pandemic, consuming both the books and the accompanying TikTok content at speed with my copious amount of freetime.</p>
+        <p>My friends and I congregated monthly on Zoom to discuss the latest releases in the genre, starting Goodreads and Storygraph accounts to share recommendations and reviews.</p>
+        <p>As shops opened up again, "booktok made me buy it" tables and shelves were given pride of place in most retailers I visited.</p>
+        <p>In this analysis I set out to establish how much my personal experience falling in love with romance lines up with broader trends in the genre's popularity</p>
+        <p>Here is what I found...</p>
+    </div>
+    <div class="full-width">
+        <figure>
+            <h2>There are fewer bestsellers than you think</h2>
+            <div id="my-svg-chart"></div>
+        </figure>
+    </div>
+    <div class="content">
+        <p>Between 2016 and 2025, there were over 8000 best seller list spots available to aspiring authors.</p>
+        <p>Fewer than 2,200 books populated those spots, about 20 percent of them romance titles.</p>
+    </div>
+    <div class="almost_full_width">
+        <figure>
+        <h2>Some titles have been on the list for years</h2>
+        <iframe title="" aria-label="Bar Chart" id="datawrapper-chart-o4fcT" src="https://datawrapper.dwcdn.net/o4fcT/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="313" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+            </figure>
+    </div>
+    <div class="content">
+        <p>Where the Crawdads Sing spent almost 200 weeks on the best sellers list over the past decade.</p>
+        <p>Of the 10 books that appeared on the list the most over the past decade, only 2 were classified as romance novels by my AI model. The most popular is The Seven Husbands of Evelyn Hugo, written by Taylor Jenkins Reid</p>
+        <p>This classification hides elements of the romance genre's influence in other popular reads. For instance, Fourth Wing and Iron Flame are both romantasy books — fantasy with an integral romance plot.</p>
+        <p>Similarly, Colleen Hoover's It Ends with Us covers themes of domestic violence by exploring a romantic relationship between two characters.</p>
+        <p>In fact, several of Hoover's other titles are among the most prominent romance novels from the past decade.</p>
+    </div>
+    <div class="almost_full_width">
+        <figure>
+        <h2>Key authors dominate romance</h2>
+       <iframe title="" aria-label="Bar Chart" id="datawrapper-chart-L5uPL" src="https://datawrapper.dwcdn.net/L5uPL/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="347" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+        </figure>
+    </div>
+    <div class="content">
+        <p>Hoover wrote 3 of the top 10 romance novels, with Emily Henry additionally penning Happy Place and People We Meet on Vacation.</p>
+        <p>These two authors are a major driver of the spike in romance novels' popularity on the New York Times bestsellers list</p>
+        <p>In June 2022, the month of peak romance on the best sellers's list over the past decade, each author had 3 seperate books on the list.</p>
+        <p>While the summer of 2022 to saw a spike in romance authors dominating sales, followed by a drop in their prominance, data from 2026 suggests something of a resurgence for the genre.</p>
+        <p>In sum:</p>
+    </div>
+    <div class="almost_full_width">
+        <figure>
+            <h2>Romance is far from dead</h2>
+     <iframe title="" aria-label="Line chart" id="datawrapper-chart-tDWwa" src="https://datawrapper.dwcdn.net/tDWwa/4/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="403" data-external="1"></iframe><script type="text/javascript">(function(){function e(){window.addEventListener(`message`,function(e){if(e.data[`datawrapper-height`]!==void 0){var t=document.querySelectorAll(`iframe`);for(var n in e.data[`datawrapper-height`])for(var r=0,i;i=t[r];r++)if(i.contentWindow===e.source){var a=e.data[`datawrapper-height`][n]+`px`;i.style.height=a}}})}e()})();</script>
+        </figure>
+    </div>
+    <div class="content">
+        <div class="methodology_section">
+            <h2>Methodology</h2>
+            <p>I queried the New York Times' API to gather the list of print and e-book fiction best sellers for every week between Jan. 2016 and the end of June 2026.
+            I then used the GPT 5.4 Mini AI to classify the 2,137 unique titles in this data set as romance or non-romance novels based on their listed title and description.
+            I refined my prompt to improve the models accuracy when compared to a handcoded sample of 100 titles. The accuracy rate of the prompt used for this analysis was 97%</p>
+            <p>The analysis has the following <b>limitations:</b></p>
+            <p>Classification of books as purely romance or non-romance novels does not allow for more nuanced categories like romantasy to be quantified, and can result in debateable categorisations.</p>
+            <p>While the model has an accuracy rate of 97 percent, this is based on a small handcoded sample which should be increased in size in future projects.</p>
+            <p>27 books did not have listed descriptions and were thus not included in the list of 2,137 titles analysed by the AI.</p>
+        </div>
+    </div>
+    <br></br>
+    <br></br>
+    <div class="footer">
+        <p>You can find the code for this project <a href="https://github.com/jsoma/page-templates/">here</a>.</p>
+        <p>This project was created as part of the Lede Program run by Jonathan Soma at Columbia Journalism School.</p>
+        <p>This webpage is based on a template created by Jonathan Soma. The content is based on Jeremy B. Merrill's template for AI analysis.</p>
+    </div>
+
+<!-- your JS code that uses d3 to manipulate data -->
+    <script>
+    // This code creates the size ocmparison circles
+      const bestseller_data = {
+          total_spots: 8078,
+          unique_titles: 2137,
+          romance_titles: 426,
+      }
+      
+      // Step 4. transform data into usable scales
+      // let's assume we want the max radius of the circles to be 100
+      const scaleRadius = d3.scaleSqrt()
+          .domain([0, bestseller_data.total_spots])
+          .range([0, 150]);
+
+      // Step 5. create an SVG container inside #my-svg-chart using d3.select().append()
+      const myChart = d3
+        .select('#my-svg-chart')
+        .append('svg')
+        .attr('width', 900)
+        .attr('height', 375);
+      
+      // Step 6. create SVG shapes binded with data, using d3.selectAll().data().join()
+
+      
+      const circlesBestseller = myChart
+        .selectAll('circle')
+        .data([
+          bestseller_data.total_spots,
+          bestseller_data.unique_titles, 
+          bestseller_data.romance_titles])
+        .join('circle');
+      
+      // Step 7. tweak the attributes of the SVG shapes to position them at the right places
+      // with SVG circle-specific attributes
+
+      circlesBestseller
+          .attr('cx', (d,i)=> (i+0.5)*300)
+          .attr('cy', 200)
+          .attr('r', (d) => scaleRadius(d))
+          // Change the 
+          .style('fill', (d, i) => i === 2 ? '#e75480' : '#dbdbdb');;
+
+
+      // Bonus: adding text labels to the circles
+      const labels = myChart
+        .selectAll('.label-top')
+        .data(['Total bestseller spots', 'Total books', 'Romance books'])
+        .join('text')
+        .attr('class', 'label-top')
+        .attr('x', (d,i)=> (i+0.5)*300)
+        .attr('y', 30)
+        .attr('text-anchor', 'middle')
+        .text(d => d)
+
+      // Adding this deleted the overall labels
+      // At minimum I want to show all the labels and 
+      const figureLabels = myChart
+        .selectAll('.label-middle')
+        .data(['8078', '2137', '426'])
+        .join('text')
+        .attr('class', 'label-middle')
+        .attr('x', (d,i)=> (i+0.5)*300)
+        .attr('y', 205)
+        .attr('text-anchor', 'middle')
+        .text(d => d)
+
+      </script>
+</body>
+
+</html>

@@ -4,7 +4,7 @@ Readme
 
 This repo contains the data behind my project “Have we reached peak romance?” which explores the prominence of romance titles on the New York Times best seller list.
 
-The finished writeup can be found here:
+The finished writeup can be found here: https://luciamack.github.io/ai_classification_of_nyt_bestsellers/
 
 This project was created as part of the Lede Program run by Jonathan Soma at Columbia Journalism School. My personal intention was to create an individual project to become more familiar with Jeremy B. Merrill’s template for AI analysis which was taught as part of the program.
 
